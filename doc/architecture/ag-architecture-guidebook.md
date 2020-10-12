@@ -1,8 +1,8 @@
-# NHS CV19 App System | Architecture Guidebook
+# CV19 App System | Architecture Guidebook
 
 **2020-09-14, Target V3.5** 
 
-This is a living guidebook and unique point of architectural reference for the NHS Test and Trace Application
+This is a living guidebook and unique point of architectural reference.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ This is a living guidebook and unique point of architectural reference for the N
 
 **Vision Statement**. The Test and Trace Application is about speed, precision and reach in context of the overall Test & Trace program. It triggers isolation advice in minutes, provides measurements of time and approximated distance and notifies who you met, while protecting your privacy.
 
-As of the current version there are [six main features](https://covid19.nhs.uk/): 
+As of the current version there are [six main features]: 
 
 ![Figure: App Capabilities](diagrams/img/cv19-app-system-features-2020-09-08.png "Figure: App Capabilities")
 
@@ -40,14 +40,10 @@ The CV19 App System is a composition of different functional, technical and orga
 1. App system operations
 1. Analytics
 
-![Figure: Domains](diagrams/img/cv19-app-system-domain-model-domains-2020-08-12.png "Figure: Domain Model")
-
 
 ### Functional and technical domains
 
 Note that our concepts include terminology of the GAEN framework [see Android API doc, Glossary](https://static.googleusercontent.com/media/www.google.com/en//covid19/exposurenotifications/pdfs/Android-Exposure-Notification-API-documentation-v1.3.2.pdf).
-
-![Figure: Domain Model](diagrams/img/cv19-app-system-domain-model-domain-model-2020-08-12.png "Figure: Domain Model")
 
 * **Encounter detection** provides temporary exposure key histories for index cases; we probably use attenuation duration only (and not the AG risk scoring)
 * **Diagnosis keys** are polled periodically from the backend and then matched on mobile client side using the AG-API (provide diagnosis keys, and get exposure information and summary)
@@ -85,7 +81,7 @@ This is a conceptual analysis on the usage possibilities of the GAEN Framework a
 
 ## System Architecture
 
-The NHS CV19 system architecture has four major parts, mobile app, cloud backend, external systems and operations. It adheres to following principles
+The CV19 system architecture has four major parts, mobile app, cloud backend, external systems and operations. It adheres to following principles
 
 1. No User State or Identifier is stored on the Cloud Services
 1. All APIs are stateless where possible
